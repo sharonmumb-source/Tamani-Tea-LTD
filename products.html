@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Products | Tamani Tea Ltd</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body{
+      background: #f5f9f4;
+      color: #333;
+    }
+
+    /* NAVBAR */
+    nav{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 10%;
+      background: #1b5e20;
+    }
+
+    .logo{
+      color: white;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .nav-links{
+      display: flex;
+      gap: 25px;
+      list-style: none;
+    }
+
+    .nav-links a{
+      color: white;
+      text-decoration: none;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover{
+      color: #c8e6c9;
+    }
+
+    /* HERO */
+    .products-hero{
+      height: 45vh;
+      background: linear-gradient(rgba(0,0,0,0.5),
+      rgba(0,0,0,0.5)),
+      url("images/tea-banner.jpg");
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      padding: 20px;
+    }
+
+    .products-hero h1{
+      font-size: 55px;
+      margin-bottom: 15px;
+    }
+
+    .products-hero p{
+      font-size: 20px;
+      max-width: 700px;
+      line-height: 1.6;
+    }
+
+    /* PRODUCTS SECTION */
+    .products{
+      padding: 80px 10%;
+    }
+
+    .section-title{
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .section-title h2{
+      font-size: 42px;
+      color: #1b5e20;
+      margin-bottom: 15px;
+    }
+
+    .section-title p{
+      color: #555;
+      font-size: 18px;
+    }
+
+    /* CATEGORY */
+    .category{
+      margin-bottom: 80px;
+    }
+
+    .category-title{
+      font-size: 34px;
+      color: #2e7d32;
+      margin-bottom: 35px;
+      border-left: 6px solid #2e7d32;
+      padding-left: 15px;
+    }
+
+    /* PRODUCT GRID */
+    .product-grid{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+    }
+
+    /* PRODUCT CARD */
+    .product-card{
+      background: white;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: 0.3s;
+    }
+
+    .product-card:hover{
+      transform: translateY(-8px);
+    }
+
+    .product-card img{
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .product-content{
+      padding: 25px;
+    }
+
+    .product-content h3{
+      font-size: 24px;
+      margin-bottom: 12px;
+      color: #1b5e20;
+    }
+
+    .product-content p{
+      color: #666;
+      line-height: 1.7;
+      margin-bottom: 18px;
+    }
+
+    .price{
+      font-size: 22px;
+      font-weight: bold;
+      color: #2e7d32;
+      margin-bottom: 20px;
+    }
+
+    .btn{
+      display: inline-block;
+      background: #2e7d32;
+      color: white;
+      text-decoration: none;
+      padding: 12px 25px;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+
+    .btn:hover{
+      background: #1b5e20;
+    }
+
+    /* FOOTER */
+    footer{
+      background: #1b5e20;
+      color: white;
+      text-align: center;
+      padding: 25px;
+      margin-top: 50px;
+    }
+
+    /* RESPONSIVE */
+    @media(max-width:768px){
+
+      .products-hero h1{
+        font-size: 38px;
+      }
+
+      nav{
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .nav-links{
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav>
+
+    <div class="logo">
+  <img src="images/image2.jpg" alt="Tamani Tea Logo">
+</div>
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+  </nav>
+
+  <!-- HERO -->
+  <section class="products-hero">
+
+    <div>
+      <h1>Our Premium Tea Collection</h1>
+
+      <p>
+        Experience authentic flavor, aroma and tradition with our carefully selected tea blends and Somali spice mixes.
+      </p>
+    </div>
+
+  </section>
+
+  <!-- PRODUCTS -->
+  <section class="products">
+
+    <div class="section-title">
+      <h2>Explore Our Products</h2>
+
+      <p>
+        Crafted for tea lovers who value quality, taste and rich tradition.
+      </p>
+    </div>
+
+    <!-- BLACK TEA -->
+    <div class="category">
+
+      <h2 class="category-title">Black Tea</h2>
+
+      <div class="product-grid">
+
+        <!-- PRODUCT 1 -->
+        <div class="product-card">
+
+          <img src="images/blacktea.png" alt="Black Tea">
+
+          <div class="product-content">
+
+            <h3>Premium Black Tea</h3>
+
+            <p>
+              Rich, smooth and refreshing black tea carefully sourced from quality tea farms.
+            </p>
+
+            <a
+href="https://wa.me/+254722282441?text=Hello%20Tamani%20Tea%20Ltd,%20I%20would%20like%20to%20place%20an%20order."
+class="whatsapp-order-btn"
+target="_blank">
+
+<i class="fab fa-whatsapp"></i>
+<span>Order Now</span>
+
+</a>
+
+          </div>
+
+        </div>
+
+        <!-- PRODUCT 2 -->
+        <div class="product-card">
+
+          <img src="images/teabag.png" alt="Tea Bags">
+
+          <div class="product-content">
+
+            <h3>Classic Tea Bags</h3>
+
+            <p>
+              Convenient tea bags packed with strong natural flavor perfect for everyday use.
+            </p>
+
+
+            <a
+href="https://wa.me/+254722282441?text=Hello%20Tamani%20Tea%20Ltd,%20I%20would%20like%20to%20place%20an%20order."
+class="whatsapp-order-btn"
+target="_blank">
+
+<i class="fab fa-whatsapp"></i>
+<span>Order Now</span>
+
+</a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- SHAH MACAAN -->
+    <div class="category">
+
+      <h2 class="category-title">
+        Black Tea & Somali Spices (SHAH MACAAN)
+      </h2>
+
+      <div class="product-grid">
+
+        <!-- PRODUCT 1 -->
+        <div class="product-card">
+
+          <img src="images/spicetea.png" alt="Shah Macaan">
+
+          <div class="product-content">
+
+            <h3>Original Shah Macaan</h3>
+
+            <p>
+              Traditional Somali spiced tea blend infused with aromatic spices for a warm sweet taste.
+            </p>
+
+            <a
+href="https://wa.me/+254722282441?text=Hello%20Tamani%20Tea%20Ltd,%20I%20would%20like%20to%20place%20an%20order."
+class="whatsapp-order-btn"
+target="_blank">
+
+<i class="fab fa-whatsapp"></i>
+<span>Order Now</span>
+
+</a>
+
+          </div>
+
+        </div>
+
+        <!-- PRODUCT 2 -->
+        <div class="product-card">
+
+          <img src="images/baraka.png" alt="Spiced Tea">
+
+          <div class="product-content">
+
+            <h3>Premium Spiced Tea Mix</h3>
+
+            <p>
+              A rich fusion of black tea, cinnamon, cardamom and authentic Somali spices.
+            </p>
+
+            <a
+href="https://wa.me/+254722282441?text=Hello%20Tamani%20Tea%20Ltd,%20I%20would%20like%20to%20place%20an%20order."
+class="whatsapp-order-btn"
+target="_blank">
+
+<i class="fab fa-whatsapp"></i>
+<span>Order Now</span>
+
+</a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+  <a href="contact.html" class="btn">
+  contact us
+</a>
+
+  <!-- FOOTER -->
+  <footer>
+
+
+  <div class="footer-logo">
+    <img src="images/image2.jpg" alt="Tamani Tea Logo">
+  </div>
+
+  <p>
+    © 2026 Tamani Tea Ltd | Refreshing Every Moment 🍃
+  </p>
+
+
+
+  </footer>
+
+<script src="script.js"></script>
+</body>
+</html>
