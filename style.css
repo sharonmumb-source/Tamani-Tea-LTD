@@ -80,19 +80,74 @@ nav a:hover{
 .hero-text button:hover{
   background:#145c45;
 }
-
-.hero-image{
-  flex:1;
+.hero-slider{
+  width: 100%;
+  max-width: 550px;
+  height: 500px;
+  overflow: hidden;
+  border-radius: 20px;
+  position: relative;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
-.hero-image img{
-   width:100%;
-  height:500px;
-  object-fit:cover;
-  border-radius:20px;
-  box-shadow:0 10px 30px rgba(0,0,0,0.2);
+/* SLIDES CONTAINER */
+.slides{
+  display: flex;
+  width: 600%;
+  height: 100%;
+  animation: slide 30s infinite;
 }
 
+/* IMAGES */
+.slides img{
+  width: calc(100% / 6);
+  height: 100%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+/* ANIMATION */
+@keyframes slide{
+
+  /* IMAGE 1 */
+  0%, 12%{
+    transform: translateX(0%);
+  }
+
+  /* IMAGE 2 */
+  16%, 28%{
+    transform: translateX(-16.666%);
+  }
+
+  /* IMAGE 3 */
+  32%, 44%{
+    transform: translateX(-33.333%);
+  }
+
+  /* IMAGE 4 */
+  48%, 60%{
+    transform: translateX(-50%);
+  }
+
+  /* IMAGE 5 */
+  64%, 76%{
+    transform: translateX(-66.666%);
+  }
+
+  /* IMAGE 6 */
+  80%, 92%{
+    transform: translateX(-83.333%);
+  }
+
+  /* BACK TO START */
+  100%{
+    transform: translateX(0%);
+  }
+.hero-slider:hover .slides{
+  animation-play-state: paused;
+}
+
+}
 /* Responsive */
 @media(max-width:900px){
 
