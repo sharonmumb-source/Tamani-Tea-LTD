@@ -53,22 +53,41 @@
       color: #c8e6c9;
     }
 
-    /* HERO */
-    .products-hero{
-      height: 45vh;
-      background: linear-gradient(rgba(0,0,0,0.5),
-      rgba(0,0,0,0.5)),
-      url("images/tea-banner.jpg");
-      background-size: cover;
-      background-position: center;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      color: white;
-      padding: 20px;
-    }
+    /* PRODUCTS HERO */
+.products-hero{
+  height:70vh;
+  background:
+    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url("images/teabag.png");
 
+  background-size:cover;
+  background-position:center;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+
+.products-overlay{
+  width:100%;
+  padding:20px;
+}
+
+.products-content{
+  max-width:850px;
+  margin:auto;
+  color:white;
+}
+
+.products-content h1{
+  font-size:60px;
+  margin-bottom:20px;
+}
+
+.products-content p{
+  font-size:22px;
+  line-height:1.8;
+}
     .products-hero h1{
       font-size: 55px;
       margin-bottom: 15px;
@@ -226,19 +245,27 @@
     </ul>
 
   </nav>
+<!-- PRODUCTS HERO -->
+<section class="products-hero">
 
-  <!-- HERO -->
-  <section class="products-hero">
+  <div class="products-overlay">
 
-    <div>
+    <div class="products-content">
+
       <h1>Our Premium Tea Collection</h1>
 
       <p>
-        Experience authentic flavor, aroma and tradition with our carefully selected tea blends and Somali spice mixes.
+        Experience authentic flavor, aroma and tradition
+        with our carefully selected tea blends and
+        Somali spice mixes.
       </p>
+
     </div>
 
-  </section>
+  </div>
+
+</section>
+
 
   <!-- PRODUCTS -->
   <section class="products">
@@ -389,29 +416,61 @@ target="_blank">
   contact us
 </a>
 
-  <!-- FOOTER -->
-<footer>
+   <!-- FOOTER -->
+<footer class="footer">
 
-  <div class="footer-logo">
-    <img src="images/login.jpg" alt="Tamani Tea Logo">
+  <!-- ABOUT -->
+  <div class="footer-box">
+    <h3>About Us</h3>
+    <p>
+      Tamani Tea Ltd is dedicated to delivering refreshing,
+      high-quality tea products that bring people together
+      while promoting health and wellness.
+    </p>
   </div>
 
-  <!-- NAV LINKS IN FOOTER -->
-  <div class="footer-links">
+  <!-- FOLLOW US -->
+  <div class="footer-box">
+    <h3>Follow Us</h3>
+
+    <div class="social-icons">
+      <a href="#">Facebook</a>
+      <a href="#">Instagram</a>
+      <a href="#">Twitter</a>
+    </div>
+
+    <div class="footer-logo">
+      <img src="images/login.jpg" alt="Tamani Tea Logo">
+    </div>
+  </div>
+
+  <!-- QUICK LINKS -->
+  <div class="footer-box">
     <h3>Quick Links</h3>
+
     <ul>
       <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
+      <li><a href="about.html">About Us</a></li>
       <li><a href="products.html">Products</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </div>
 
-  <p>
-    © 2026 Tamani Tea Ltd | Refreshing Every Moment 🍃
-  </p>
+  <!-- CONTACT -->
+  <div class="footer-box">
+    <h3>Contact Us</h3>
+
+    <p>📍 Shelter Afrique Center <br>First Floor,Longonot Road,</br> P.O Box 106325-00101 <br>Nairobi, Kenya.</p>
+    <p>📞 +254 722 282 441 | +254 722 933 567</p>
+    <p>✉ tamanitealtd@gmail.com</p>
+  </div>
 
 </footer>
+
+<!-- COPYRIGHT -->
+<div class="footer-bottom">
+  © 2026 Tamani Tea Ltd | Refreshing Every Moment 🍃
+</div>
 
 <script src="script.js"></script>
 </body>

@@ -58,23 +58,42 @@
     }
 
     /* HERO */
-    .contact-hero{
-      height: 40vh;
-      background:
-      linear-gradient(rgba(0,0,0,0.5),
-      rgba(0,0,0,0.5)),
-      url("images/contact-banner.jpg");
+    .contact-hero {
+  height: 60vh;
+  background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+              url("images/image4.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
 
-      background-size: cover;
-      background-position: center;
+.hero-overlay {
+  max-width: 750px;
+  padding: 20px;
+}
 
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      color: white;
-      padding: 20px;
-    }
+.tagline {
+  display: inline-block;
+  background: rgba(255,255,255,0.15);
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.contact-hero h1 {
+  font-size: 52px;
+  margin-bottom: 15px;
+}
+
+.contact-hero p {
+  font-size: 18px;
+  opacity: 0.9;
+}
 
     .contact-hero h1{
       font-size: 55px;
@@ -88,16 +107,23 @@
     }
 
     /* CONTACT SECTION */
-    .contact-section{
-      padding: 80px 10%;
-    }
+    .contact-section {
+  padding: 80px 10%;
+  background: #f6f9f6;
+}
 
-    .contact-container{
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-      gap: 50px;
-      align-items: center;
-    }
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 40px;
+}
+
+.contact-card {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
 
     /* LEFT */
     .contact-info h2{
@@ -113,24 +139,19 @@
       margin-bottom: 35px;
     }
 
-    .info-box{
-      display: flex;
-      align-items: center;
-      gap: 18px;
-      margin-bottom: 25px;
-    }
+    .info-item {
+  display: flex;
+  gap: 15px;
+  margin: 20px 0;
+  align-items: center;
+}
 
-    .info-box i{
-      width: 55px;
-      height: 55px;
-      background: #2e7d32;
-      color: white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-radius: 50%;
-      font-size: 22px;
-    }
+.info-item i {
+  background: #1b5e20;
+  color: white;
+  padding: 12px;
+  border-radius: 50%;
+}
 
     .info-box h4{
       font-size: 20px;
@@ -269,144 +290,144 @@
     </ul>
 
   </nav>
-
   <!-- HERO -->
   <section class="contact-hero">
-
-    <div>
-
-      <h1>Contact Us</h1>
-
-      <p>
-        We are always ready to serve you with premium tea blends and authentic Somali spiced tea.
-      </p>
-
-    </div>
-
-  </section>
+  <div class="hero-overlay">
+    <span class="tagline">We’re here for you</span>
+    <h1>Contact Tamani Tea Ltd</h1>
+    <p>
+      Reach out for orders, partnerships, or inquiries — we respond quickly and professionally.
+    </p>
+  </div>
+</section>
 
   <!-- CONTACT SECTION -->
   <section class="contact-section">
 
-    <div class="contact-container">
+  <div class="contact-grid">
 
-      <!-- LEFT SIDE -->
-      <div class="contact-info">
+    <!-- CONTACT INFO CARD -->
+    <div class="contact-card info">
 
-        <h2>Get In Touch</h2>
+      <h2>Get In Touch</h2>
 
-        <p>
-          Have questions, orders or partnership inquiries?
-          Reach out to Tamani Tea Ltd and we’ll be happy to assist you.
-        </p>
+      <p>
+        We’re ready to assist you with tea orders, bulk supply, and partnerships.
+      </p>
 
-        <!-- PHONE -->
-        <div class="info-box">
-
-          <i class="fas fa-phone"></i>
-
-          <div>
-            <h4>Phone</h4>
-            <p>+254 722 282 441 | +254 722 933 567</p>
-          </div>
-
+      <div class="info-item">
+        <i class="fas fa-phone"></i>
+        <div>
+          <h4>Phone</h4>
+          <span>+254 722 282 441 | +254 722 933 567</span>
         </div>
-
-        <!-- EMAIL -->
-        <div class="info-box">
-
-          <i class="fas fa-envelope"></i>
-
-          <div>
-            <h4>Email</h4>
-            <p>tamanitealtd@gmail.com</p>
-          </div>
-
-        </div>
-
-        <!-- LOCATION -->
-        <div class="info-box">
-
-          <i class="fas fa-location-dot"></i>
-
-          <div>
-            <h4>Location</h4>
-            <p>Shelter Afrique Center <br>First Floor,Longonot Road,</br> P.O Box 106325-00101 <br>Nairobi, Kenya.</br></p>
-          </div>
-
-        </div>
-
       </div>
 
-      <!-- RIGHT SIDE -->
-      <div class="contact-form">
+      <div class="info-item">
+        <i class="fas fa-envelope"></i>
+        <div>
+          <h4>Email</h4>
+          <span>tamanitealtd@gmail.com</span>
+        </div>
+      </div>
 
-        <h3>Send a Message</h3>
-
-        <form>
-
-            <label>
-                <input type="text" placeholder="Your Name" required>
-            </label>
-
-            <label>
-                <input type="email" placeholder="Your Email" required>
-            </label>
-
-            <label>
-                <input type="text" placeholder="Subject">
-            </label>
-
-            <label>
-                <textarea placeholder="Write your message..."></textarea>
-            </label>
-
-            <button type="submit">
-            Send Message
-          </button>
-
-        </form>
-
+      <div class="info-item">
+        <i class="fas fa-location-dot"></i>
+        <div>
+          <h4>Location</h4>
+          <span>Shelter Afrique Center <br>
+        First Floor, Longonot Road <br>
+        P.O Box 106325-00101 <br>
+        Nairobi, Kenya</span>
+        </div>
       </div>
 
     </div>
 
-  </section>
+    <!-- FORM CARD -->
+    <div class="contact-card form">
+
+      <h3>Send Message</h3>
+
+      <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <input type="text" placeholder="Subject">
+        <textarea placeholder="Your Message"></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+
+    </div>
+
+  </div>
+
+</section>
 
   <!-- WHATSAPP BUTTON -->
-  <a
-href="https://wa.me/+254722282441?text=Hello%20Tamani%20Tea%20Ltd,%20I%20would%20like%20to%20place%20an%20order."
-class="whatsapp-order-btn"
+  <a href="https://wa.me/254722282441"
+class="whatsapp-btn"
 target="_blank">
-
 <i class="fab fa-whatsapp"></i>
-<span>Order on WhatsApp</span>
+<span> WhatsApp</span>
 
 </a>
 
-  <!-- FOOTER -->
-<footer>
+   <!-- FOOTER -->
+<footer class="footer">
 
-  <div class="footer-logo">
-    <img src="images/login.jpg" alt="Tamani Tea Logo">
+  <!-- ABOUT -->
+  <div class="footer-box">
+    <h3>About Us</h3>
+    <p>
+      Tamani Tea Ltd is dedicated to delivering refreshing,
+      high-quality tea products that bring people together
+      while promoting health and wellness.
+    </p>
   </div>
 
-  <!-- NAV LINKS IN FOOTER -->
-  <div class="footer-links">
+  <!-- FOLLOW US -->
+  <div class="footer-box">
+    <h3>Follow Us</h3>
+
+    <div class="social-icons">
+      <a href="#">Facebook</a>
+      <a href="#">Instagram</a>
+      <a href="#">Twitter</a>
+    </div>
+
+    <div class="footer-logo">
+      <img src="images/login.jpg" alt="Tamani Tea Logo">
+    </div>
+  </div>
+
+  <!-- QUICK LINKS -->
+  <div class="footer-box">
     <h3>Quick Links</h3>
+
     <ul>
       <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
+      <li><a href="about.html">About Us</a></li>
       <li><a href="products.html">Products</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </div>
 
-  <p>
-    © 2026 Tamani Tea Ltd | Refreshing Every Moment 🍃
-  </p>
+  <!-- CONTACT -->
+  <div class="footer-box">
+    <h3>Contact Us</h3>
+
+    <p>📍 Shelter Afrique Center <br>First Floor,Longonot Road,</br> P.O Box 106325-00101 <br>Nairobi, Kenya.</p>
+    <p>📞 +254 722 282 441 | +254 722 933 567</p>
+    <p>✉ tamanitealtd@gmail.com</p>
+  </div>
 
 </footer>
+
+<!-- COPYRIGHT -->
+<div class="footer-bottom">
+  © 2026 Tamani Tea Ltd | Refreshing Every Moment 🍃
+</div>
 
 <script src="script.js"></script>
 </body>

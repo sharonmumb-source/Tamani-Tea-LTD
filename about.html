@@ -56,20 +56,35 @@
       color:#ffd54f;
     }
 
-    /* Hero */
-    .about-hero{
-      height:60vh;
-      background:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
-      url('images/about-banner.jpg');
-      background-size:cover;
-      background-position:center;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      text-align:center;
-      color:white;
-      padding:20px;
-    }
+    /* ABOUT HERO */
+.about-hero{
+  height:70vh;
+  background:
+    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url("images/image3.png");
+  background-size:cover;
+  background-position:center;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:20px;
+}
+
+.about-content{
+  max-width:800px;
+  color:white;
+}
+
+.about-content h1{
+  font-size:60px;
+  margin-bottom:20px;
+}
+
+.about-content p{
+  font-size:22px;
+  line-height:1.8;
+}
 
     .about-hero h1{
       font-size:65px;
@@ -111,8 +126,8 @@
       margin-bottom:25px;
     }
     .about-text h3{
-    font-size:30px;
-    color:#f4c542;
+    font-size:40px;
+    color:#0f3d2e;
     margin-bottom:25px
     }
 
@@ -247,17 +262,25 @@
     </ul>
   </nav>
 
-  <!-- Hero Section -->
-  <section class="about-hero">
-    <div>
-      <h1>About Tamani Tea</h1>
+  <!-- ABOUT HERO -->
+<section class="about-hero">
+
+  <div class="overlay">
+
+    <div class="about-content">
+
+      <h1>Tamani Tea Limited</h1>
 
       <p>
-        Bringing the authentic taste of premium Kenyan tea to homes,
-        cafés, hotels, and tea lovers around the world.
+        Bringing the authentic taste of premium Kenyan tea
+        to homes, cafés, hotels, and tea lovers around the world.
       </p>
+
     </div>
-  </section>
+
+  </div>
+
+</section>
 
   <!-- About Content -->
   <section class="about-section">
@@ -270,15 +293,14 @@
 
     <div class="about-text">
 
-      <h2>Who We Are</h2>
 
-      <h3>company background</h3>
+      <h3 class="section-title">Company Background</h3>
 
       <p>
         Tamani Tea Ltd was incorporated in 2024 as a trading entity exporting and importing commodities and products.<br> The company therefore intends to venture into bulk tea export and later tea value addition to comply with the tea Act 2021.
       </p>
 
-        <h3>Our Tea Philosophy</h3>
+        <h3 class="section-title">Our Philosophy</h3>
 
       <p>
         We believe tea is more than just a drink — it is an experience of
@@ -287,13 +309,13 @@
         refreshing and memorable.
       </p>
 
-        <h3>Motto</h3>
+        <h3 class="section-title">Motto</h3>
         <p>Every sip is a journey of Taste and Tradition</p>
 
-        <h3>vision</h3>
+        <h3 class="section-title">Vision</h3>
         <p>To be the most trusted and respected tea brand globally,known for our unwavering commitment to sustainability, social responsibility and pursuit of tea excellence.</p>
 
-        <h3>mission</h3>
+        <h3 class="section-title">Mission</h3>
 
       <p>
         Our mission is to provide the world with the finest, most ethically sourced tea,fostering a sustainable and equitable tea industry while delighting our customers with exceptional flavor and quality.
@@ -307,67 +329,98 @@
 
   </section>
 
-  <!-- Values Section -->
-  <section class="values">
+  <!-- VALUES SECTION -->
+<section class="values">
 
-    <h2>Why Choose Us?</h2>
+  <h2>Why Choose Us?</h2>
 
-    <div class="value-cards">
+  <div class="value-cards">
 
-      <div class="card">
-        <h3>Premium Quality</h3>
+    <div class="card">
+      <h3>Premium Quality</h3>
 
-        <p>
-          We source and process the finest tea leaves to guarantee exceptional
-          flavor and freshness.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>Authentic Kenyan Tea</h3>
-
-        <p>
-          Experience the rich taste and aroma of tea grown in Kenya’s fertile
-          highlands.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>Customer Satisfaction</h3>
-
-        <p>
-          We are committed to providing excellent products and memorable tea
-          experiences.
-        </p>
-      </div>
-
+      <p>
+        We source and process the finest tea leaves to guarantee
+        exceptional flavor and freshness.
+      </p>
     </div>
 
-  </section>
+    <div class="card">
+      <h3>Authentic Kenyan Tea</h3>
 
-  <!-- FOOTER -->
-<footer>
+      <p>
+        Experience the rich taste and aroma of tea grown in Kenya’s
+        fertile highlands.
+      </p>
+    </div>
 
-  <div class="footer-logo">
-    <img src="images/login.jpg" alt="Tamani Tea Logo">
+    <div class="card">
+      <h3>Customer Satisfaction</h3>
+
+      <p>
+        We are committed to providing excellent products and memorable
+        tea experiences.
+      </p>
+    </div>
+
   </div>
 
-  <!-- NAV LINKS IN FOOTER -->
-  <div class="footer-links">
+</section>
+  <!-- FOOTER -->
+<footer class="footer">
+
+  <!-- ABOUT -->
+  <div class="footer-box">
+    <h3>About Us</h3>
+    <p>
+      Tamani Tea Ltd is dedicated to delivering refreshing,
+      high-quality tea products that bring people together
+      while promoting health and wellness.
+    </p>
+  </div>
+
+  <!-- FOLLOW US -->
+  <div class="footer-box">
+    <h3>Follow Us</h3>
+
+    <div class="social-icons">
+      <a href="#">Facebook</a>
+      <a href="#">Instagram</a>
+      <a href="#">Twitter</a>
+    </div>
+
+    <div class="footer-logo">
+      <img src="images/login.jpg" alt="Tamani Tea Logo">
+    </div>
+  </div>
+
+  <!-- QUICK LINKS -->
+  <div class="footer-box">
     <h3>Quick Links</h3>
+
     <ul>
       <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
+      <li><a href="about.html">About Us</a></li>
       <li><a href="products.html">Products</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </div>
 
-  <p>
-    © 2026 Tamani Tea Ltd | Refreshing Every Moment 🍃
-  </p>
+  <!-- CONTACT -->
+  <div class="footer-box">
+    <h3>Contact Us</h3>
+
+    <p>📍 Shelter Afrique Center <br>First Floor,Longonot Road,</br> P.O Box 106325-00101 <br>Nairobi, Kenya.</p>
+    <p>📞 +254 722 282 441 | +254 722 933 567</p>
+    <p>✉ tamanitealtd@gmail.com</p>
+  </div>
 
 </footer>
+
+<!-- COPYRIGHT -->
+<div class="footer-bottom">
+  © 2026 Tamani Tea Ltd | Refreshing Every Moment 🍃
+</div>
 
 <script src="script.js"></script>
 </body>
