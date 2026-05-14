@@ -1,3 +1,4 @@
+```css id="s2i2f4"
 /* ================= GLOBAL ================= */
 *{
   margin:0;
@@ -15,6 +16,8 @@ body{
   overflow-x:hidden;
   color:#333;
 }
+
+
 
 /* ================= NAVBAR ================= */
 nav{
@@ -53,44 +56,102 @@ nav ul li a:hover{
   color:#ffd54f;
 }
 
+
+
 /* ================= HERO SECTION ================= */
 .hero{
+  position:relative;
+  width:100%;
+  height:100vh;
+  overflow:hidden;
   display:flex;
-  justify-content:space-between;
+  justify-content:center;
   align-items:center;
-  gap:60px;
-  padding:80px 10%;
-  flex-wrap:wrap;
+  text-align:center;
+  padding:0 10%;
 }
 
+
+
+/* ================= HERO SLIDER BACKGROUND ================= */
+.hero-slider{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  z-index:1;
+  overflow:hidden;
+}
+
+/* SLIDES CONTAINER */
+.slides{
+  display:flex;
+  width:600%;
+  height:100%;
+  animation:slide 30s infinite;
+}
+
+/* EACH IMAGE */
+.slides img{
+  width:16.666%;
+  height:100vh;
+  object-fit:cover;
+  flex-shrink:0;
+}
+}
+
+
+
+/* ================= DARK OVERLAY ================= */
+.overlay{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.45);
+  z-index:2;
+}
+
+
+
+/* ================= HERO TEXT ================= */
 .hero-text{
-  flex:1;
-  min-width:300px;
+  position:relative;
+  z-index:3;
+  max-width:850px;
 }
 
 .hero-text h1{
-  font-size:65px;
-  color:#0B4B43;
+  font-size:70px;
+  color:white;
   margin-bottom:25px;
   line-height:1.1;
+  text-shadow:0 5px 15px rgba(0,0,0,0.4);
 }
 
 .hero-text p{
-  font-size:20px;
-  color:#555;
+  font-size:22px;
+  color:#f1f1f1;
   line-height:1.8;
-  margin-bottom:30px;
-  max-width:600px;
+  margin-bottom:35px;
 }
 
-/* HERO BUTTONS */
+
+
+/* ================= HERO BUTTONS ================= */
 .hero-buttons{
   display:flex;
+  justify-content:center;
+  align-items:center;
   gap:20px;
   flex-wrap:wrap;
 }
 
-/* BUTTON */
+
+
+/* ================= BUTTON ================= */
 .btn{
   display:inline-block;
   padding:14px 30px;
@@ -108,70 +169,74 @@ nav ul li a:hover{
   transform:translateY(-3px);
 }
 
-/* ================= HERO SLIDER ================= */
-.hero-slider{
-  width:450px;
-  height:350px;
-  overflow:hidden;
-  border-radius:20px;
-  box-shadow:0 8px 25px rgba(0,0,0,0.2);
-  position:relative;
-}
 
-.slides{
+
+/* ================= HERO WHATSAPP BUTTON ================= */
+.hero-buttons .whatsapp-btn{
+  position:static;
+  width:auto;
+  height:auto;
+  padding:14px 28px;
+  border-radius:8px;
+  background:#25d366;
+  color:white;
+  text-decoration:none;
   display:flex;
-  width:calc(450px * 6);
-  height:100%;
-  animation:slide 30s infinite;
+  align-items:center;
+  gap:10px;
+  font-size:18px;
+  font-weight:bold;
+  transition:0.3s;
 }
 
-.slides img{
-  width:450px;
-  height:350px;
-  object-fit:cover;
-  flex-shrink:0;
+.hero-buttons .whatsapp-btn:hover{
+  background:#1ebe5d;
+  transform:translateY(-3px);
 }
 
-/* SLIDER ANIMATION */
+.hero-buttons .whatsapp-btn i{
+  font-size:22px;
+}
+
+
+
+/* ================= SLIDER ANIMATION ================= */
 @keyframes slide{
 
   0%,14%{
-    transform:translateX(0);
+    transform:translateX(0%);
   }
 
   16%,30%{
-    transform:translateX(-450px);
+    transform:translateX(-16.666%);
   }
 
   32%,46%{
-    transform:translateX(-900px);
+    transform:translateX(-33.333%);
   }
 
   48%,62%{
-    transform:translateX(-1350px);
+    transform:translateX(-50%);
   }
 
   64%,78%{
-    transform:translateX(-1800px);
+    transform:translateX(-66.666%);
   }
 
   80%,94%{
-    transform:translateX(-2250px);
+    transform:translateX(-83.333%);
   }
 
   100%{
-    transform:translateX(0);
+    transform:translateX(0%);
   }
 }
 
-/* PAUSE SLIDER */
-.hero-slider:hover .slides{
-  animation-play-state:paused;
-}
+
 
 /* ================= VALUES SECTION ================= */
 .values{
-  padding:80px 10%;
+  padding:90px 10%;
   background:white;
   text-align:center;
 }
@@ -211,9 +276,11 @@ nav ul li a:hover{
   line-height:1.8;
 }
 
+
+
 /* ================= FEATURES ================= */
 .features{
-  padding:80px 10%;
+  padding:90px 10%;
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
   gap:30px;
@@ -244,29 +311,33 @@ nav ul li a:hover{
   line-height:1.7;
 }
 
-/* ================= WHATSAPP BUTTON ================= */
-.whatsapp-btn {
-  position: fixed;
-  bottom: 25px;
-  right: 25px;
-  width: 65px;
-  height: 65px;
-  background: #25d366;
-  color: white;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 34px;
-  text-decoration: none;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-  transition: 0.3s;
-  z-index: 1000;
+
+
+/* ================= FLOATING WHATSAPP BUTTON ================= */
+.whatsapp-btn{
+  position:fixed;
+  bottom:25px;
+  right:25px;
+  width:65px;
+  height:65px;
+  background:#25d366;
+  color:white;
+  border-radius:50%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:34px;
+  text-decoration:none;
+  box-shadow:0 5px 15px rgba(0,0,0,0.3);
+  transition:0.3s;
+  z-index:1000;
 }
 
-.whatsapp-btn:hover {
-  transform: scale(1.1);
+.whatsapp-btn:hover{
+  transform:scale(1.1);
 }
+
+
 
 /* ================= FOOTER ================= */
 .footer{
@@ -311,7 +382,9 @@ nav ul li a:hover{
   padding-left:5px;
 }
 
-/* SOCIAL ICONS */
+
+
+/* ================= SOCIAL ICONS ================= */
 .social-icons{
   display:flex;
   gap:10px;
@@ -333,14 +406,18 @@ nav ul li a:hover{
   color:#1b4332;
 }
 
-/* FOOTER LOGO */
+
+
+/* ================= FOOTER LOGO ================= */
 .footer-logo img{
   width:180px;
   border-radius:10px;
   margin-top:10px;
 }
 
-/* COPYRIGHT */
+
+
+/* ================= COPYRIGHT ================= */
 .footer-bottom{
   background:#081c15;
   color:white;
@@ -348,6 +425,8 @@ nav ul li a:hover{
   padding:18px;
   font-size:14px;
 }
+
+
 
 /* ================= RESPONSIVE ================= */
 @media(max-width:900px){
@@ -365,9 +444,9 @@ nav ul li a:hover{
   }
 
   .hero{
-    flex-direction:column;
-    text-align:center;
-    padding:60px 8%;
+    height:auto;
+    min-height:100vh;
+    padding:120px 8%;
   }
 
   .hero-text h1{
@@ -375,58 +454,11 @@ nav ul li a:hover{
   }
 
   .hero-text p{
-    margin:auto;
-    margin-bottom:30px;
+    font-size:18px;
   }
 
   .hero-buttons{
     justify-content:center;
-  }
-
-  .hero-slider{
-    width:100%;
-    max-width:400px;
-    height:300px;
-  }
-
-  .slides{
-    width:calc(400px * 6);
-  }
-
-  .slides img{
-    width:400px;
-    height:300px;
-  }
-
-  @keyframes slide{
-
-    0%,14%{
-      transform:translateX(0);
-    }
-
-    16%,30%{
-      transform:translateX(-400px);
-    }
-
-    32%,46%{
-      transform:translateX(-800px);
-    }
-
-    48%,62%{
-      transform:translateX(-1200px);
-    }
-
-    64%,78%{
-      transform:translateX(-1600px);
-    }
-
-    80%,94%{
-      transform:translateX(-2000px);
-    }
-
-    100%{
-      transform:translateX(0);
-    }
   }
 
   .footer{
@@ -441,3 +473,4 @@ nav ul li a:hover{
     justify-content:center;
   }
 }
+```
